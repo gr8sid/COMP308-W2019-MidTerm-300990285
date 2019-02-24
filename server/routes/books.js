@@ -38,9 +38,24 @@ router.get('/add', (req, res, next) => {
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+  let newBook = book({
+    "Title": req.body.Title,
+    "Price": req.body.Price,
+    "Author": req.body.Author,
+    "Genre": req.body.Genre
+});
+
+book.create(newBook, (err, contactModel) => {
+    if(err) {
+        console.log(err);
+        res.end(err);
+    }
+    else {
+        // refresh the contact list
+        res.redirect('/books');
+    }
+});
+    
    
 });
 
@@ -74,15 +89,44 @@ router.post('/:id', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
+    let id = req.params.id;
+
+    let updatedBook = book({
+        "_id": id,
+        "Title": req.body.Title,
+        "Price": req.body.Price,
+        "Author": req.body.Author,
+        "Genre": req.body.Genre
+    });
+
+    book.update({_id: id}, updatedBook, (err) => {
+        if(err) {
+            console.log(err);
+            res.end(err);
+        }
+        else {
+            // refresh the contact list
+            res.redirect('/books');
+        }
+    })
 
 });
 
 // GET - process the delete by user id
 router.get('/delete/:id', (req, res, next) => {
 
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+  let id = req.params.id;
+
+  book.remove({_id: id}, (err) => {
+      if(err) {
+          console.log(err);
+          res.end(err);
+      }
+      else {
+          // refresh the contact list
+          res.redirect('/books');
+      }
+  });
 });
 
 
