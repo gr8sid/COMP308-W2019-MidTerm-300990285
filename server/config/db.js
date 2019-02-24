@@ -1,3 +1,10 @@
+/*
+File: db.js - config path to the database
+Name: Sidharth Choudhary
+Student ID: 300990285
+Web App Name: BOOKPalace
+*/
+
 module.exports = {
   //local MongoDB deployment ->
   //"URI": "mongodb://localhost/books308"

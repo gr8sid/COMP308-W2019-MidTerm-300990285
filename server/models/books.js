@@ -1,3 +1,10 @@
+/*
+File: book.js - Db Schema for books
+Name: Sidharth Choudhary
+Student ID: 300990285
+Web App Name: BOOKPalace
+*/
+
 let mongoose = require('mongoose');
 
 // create a model class

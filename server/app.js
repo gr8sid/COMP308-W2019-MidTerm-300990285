@@ -1,3 +1,10 @@
+/*
+File: app.js
+Name: Sidharth Choudhary
+Student ID: 300990285
+Web App Name: BOOKPalace
+*/
+
 // moddules for node and express
 let createError = require('http-errors');
 let express = require('express');

@@ -1,3 +1,10 @@
+/*
+File: index.js - routes to all the default paths
+Name: Sidharth Choudhary
+Student ID: 300990285
+Web App Name: BOOKPalace
+*/
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
