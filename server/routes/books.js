@@ -30,7 +30,7 @@ router.get('/', (req, res, next) => {
 
 });
 
-//  GET the Book Details page in order to add a new Book
+//  GET the Book Details page in order to add a new Book - Display
 router.get('/add', (req, res, next) => {
 
     res.render('books/details', {
@@ -49,13 +49,13 @@ router.post('/add', (req, res, next) => {
     "Genre": req.body.Genre
 });
 
-book.create(newBook, (err, contactModel) => {
+book.create(newBook, (err, bookObject) => {
     if(err) {
         console.log(err);
         res.end(err);
     }
     else {
-        // refresh the contact list
+        // refresh the books list
         res.redirect('/books');
     }
 });
@@ -75,7 +75,7 @@ router.get('/:id', (req, res, next) => {
         }
         else
         {
-            // show the edit view
+            // show the book edit view 
             res.render('books/details', {
                 title: 'Edit Books Details',
                 books: bookObject
@@ -103,7 +103,7 @@ router.post('/:id', (req, res, next) => {
             res.end(err);
         }
         else {
-            // refresh the contact list
+            // refresh the books list
             res.redirect('/books');
         }
     })
@@ -121,7 +121,7 @@ router.get('/delete/:id', (req, res, next) => {
           res.end(err);
       }
       else {
-          // refresh the contact list
+          // refresh the books list
           res.redirect('/books');
       }
   });

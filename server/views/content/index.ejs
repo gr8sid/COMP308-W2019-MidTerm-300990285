@@ -1,15 +1,21 @@
-<% include ../partials/header.ejs %>
 
+<head>
+<link rel="stylesheet" href="/Assets/header.css">
+</head>
+
+<% include ../partials/header.ejs %>
+<body style="background-image: url('/Assets/images/brown.jpg'); background-repeat:no-repeat; background-size: 100% 100%;">
+   
     <!-- MAIN CONTENT -->
     <div class="container">
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
-          <h1><%= title %></h1>
-            <h2>Welcome to <%= title %></h2>
+          <h1 class="heading"><%= title %></h1>
+            <h2 class="heading" style="font-size:30px">Welcome to <%= title %></h2>
         </div>
       </div>
     </div>
-
+</body>
 <% include ../partials/footer.ejs %>
 
 

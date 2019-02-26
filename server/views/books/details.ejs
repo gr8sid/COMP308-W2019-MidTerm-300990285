@@ -6,40 +6,40 @@ Web App Name: BOOKPalace
 -->
 
 <% include ../partials/header.ejs %>
-
+<body style="background-image: url('/Assets/images/bookimg.jpg'); background-repeat:no-repeat;  background-size: 100% 100%;">
     <!-- MAIN CONTENT -->
     <div class="container">
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
-          <h1><%= title %></h1>
+          <h1 style="color: #CEF0D4; font-family: 'courier', cursive; font-size: 50px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px black;"><%= title %></h1>
 
 
 <% if (title == "Add Books Details"){ %>
 
             <form class="form" method="post">
               <div class="form-group">
-                <label for="NameTextField">Title</label>
+                <label for="NameTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Title</label>
                 <input type="text" class="form-control" id="NameTextField"
-                placeholder="Book Name" name="Title"  required>
+                placeholder="Book Name" name="Title" style="font-size: 20px;"  required>
               </div>
               <div class="form-group">
-                <label for="PriceTextField">Price</label>
+                <label for="PriceTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Price</label>
                 <input type="text" class="form-control" id="PriceTextField"
-                placeholder="Book Price" name="Price" required>
+                placeholder="Book Price" name="Price" style="font-size: 20px;" required>
               </div>
               <div class="form-group">
-                <label for="AuthorTextField">Author</label>
+                <label for="AuthorTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Author</label>
                 <input type="text" class="form-control" id="AuthorTextField"
-                placeholder="Book Author" name="Author" required>
+                placeholder="Book Author" name="Author" style="font-size: 20px;" required>
               </div>
               <div class="form-group">
-                <label for="GenreTextField">Genre</label>
+                <label for="GenreTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Genre</label>
                 <input type="text" class="form-control" id="GenreTextField"
-                placeholder="Book Genre" name="Genre" required>
+                placeholder="Book Genre" name="Genre" style="font-size: 20px;" required>
               </div>
 
-              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
-              <a href="/books" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+              <button type="submit" class="btn btn-primary" style="margin-left:30%; color: #CEF0D4; font-family: 'courier', cursive; font-size: 20px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px black;"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/books" class="btn btn-warning" style="color: #CEF0D4; font-family: 'courier', cursive; font-size: 20px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px black;"><i class="fa fa-undo"></i> Cancel</a>
             </form>
         </div>
       </div>
@@ -50,33 +50,33 @@ Web App Name: BOOKPalace
 
             <form class="form" method="post">
               <div class="form-group">
-                <label for="NameTextField">Title</label>
+                <label for="NameTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Title</label>
                 <input type="text" class="form-control" id="NameTextField"
-                placeholder="Book Name" name="Title" value="<%= books.Title %>"   required>
+                placeholder="Book Name" name="Title" value="<%= books.Title %>" style="font-size: 20px;"   required>
               </div>
               <div class="form-group">
-                <label for="PriceTextField">Price</label>
+                <label for="PriceTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Price</label>
                 <input type="text" class="form-control" id="PriceTextField"
-                placeholder="Book Price" name="Price" value="<%= books.Price %>"  required>
+                placeholder="Book Price" name="Price" value="<%= books.Price %>" style="font-size: 20px;" required>
               </div>
               <div class="form-group">
-                <label for="AuthorTextField">Author</label>
+                <label for="AuthorTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Author</label>
                 <input type="text" class="form-control" id="AuthorTextField"
-                placeholder="Book Author" name="Author" value="<%= books.Author %>"  required>
+                placeholder="Book Author" name="Author" value="<%= books.Author %>" style="font-size: 20px;" required>
               </div>
               <div class="form-group">
-                <label for="GenreTextField">Genre</label>
+                <label for="GenreTextField" style="color: #2B1B17; font-family: 'courier', cursive; font-size: 30px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #CEF0D4;">Genre</label>
                 <input type="text" class="form-control" id="GenreTextField"
-                placeholder="Book Genre" name="Genre" value="<%= books.Genre %>"  required>
+                placeholder="Book Genre" name="Genre" value="<%= books.Genre %>" style="font-size: 20px;" required>
               </div>
 
-              <button type="submit" class="btn btn-primary">
-              <i class="fa fa-check-square-o"></i> Submit</button>
-              <a href="/books" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+              <button type="submit" class="btn btn-primary" style="margin-left:30%; color: #CEF0D4; font-family: 'courier', cursive; font-size: 20px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #2B1B17;">
+              <i class="fa fa-check-square-o" ></i> Submit</button>
+              <a href="/books" class="btn btn-warning" style="color: #CEF0D4; font-family: 'courier', cursive; font-size: 20px; font-weight: bold; line-height: 48px;margin-top:10px; margin: 10 10 0px; text-align: left; text-shadow: 1px 1px 2px #2B1B17;"><i class="fa fa-undo"></i> Cancel</a>
             </form>
         </div>
       </div>
     </div>
 <% } %>
-
+</body>
 <% include ../partials/footer.ejs %>

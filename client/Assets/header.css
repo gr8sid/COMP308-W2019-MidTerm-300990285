@@ -1,0 +1,18 @@
+.heading{
+    color: #CEF0D4; 
+    font-family: 'courier', cursive; 
+    font-size: 60px; 
+    font-weight: bold; 
+    line-height: 48px;
+    margin-top:10px; 
+    margin: 10 10 0px; 
+    text-align: left; 
+    text-shadow: 1px 1px 2px black;
+}
+
+.heading2{
+    font-family: 'courier'; 
+    line-height: 48px;
+    margin-top:10px; 
+    text-align: left; 
+}
